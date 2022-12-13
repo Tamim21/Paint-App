@@ -64,8 +64,10 @@
         }
     @Override
     public Object copy() throws CloneNotSupportedException {
-        Line l = (Line) super.clone(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
-        System.arraycopy(v, 0, l.v, 0, 2);
+        Line l = (Line) super.clone();
+        l.v = new Vertex[2];
+        for(int i = 0;i<2;i++) l.v[i] = (Vertex)  v[i].copy();
+        System.out.println(l.getV().equals(v));
         return l;
     }
     @Override

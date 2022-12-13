@@ -64,16 +64,8 @@ public Triangle(Point p1,Point p2, Point p3 ){
     public Object copy() throws CloneNotSupportedException {
         Triangle l = (Triangle) super.clone();
         l.v = new Vertex[3];
-        for(int i = 0;i<3;i++){
-            l.v[i] = (Vertex)  v[i].copy();
-        }
+        for(int i = 0;i<3;i++) l.v[i] = (Vertex)  v[i].copy();
         System.out.println(l.getV().equals(v));
-        /*l.getV()[0].setPosition(new Point(v[0].getPosition().x,v[0].getPosition().y));
-        l.getV()[1].setPosition(new Point(v[1].getPosition().x,v[1].getPosition().y));
-        l.getV()[2].setPosition(new Point(v[2].getPosition().x,v[2].getPosition().y));
-        l.getV()[0].setDraggingPoint(new Point(v[0].getDraggingPoint().x,v[0].getDraggingPoint().y));
-        l.getV()[1].setDraggingPoint(new Point(v[1].getDraggingPoint().x,v[1].getDraggingPoint().y));
-        l.getV()[2].setDraggingPoint(new Point(v[2].getDraggingPoint().x,v[2].getDraggingPoint().y));*/
         return l;
     }
     

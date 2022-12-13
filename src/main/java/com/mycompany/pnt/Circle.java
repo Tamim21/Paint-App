@@ -55,7 +55,11 @@ public class Circle extends ImShape implements Moveable , Shape{
 
     @Override
     public Object copy() throws CloneNotSupportedException {
-        return super.clone(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        Circle l = (Circle) super.clone();
+        l.v = new Vertex[4];
+        for(int i = 0;i<4;i++) l.v[i] = (Vertex)  v[i].copy();
+        System.out.println(l.getV().equals(v));
+        return l;
     }
 
     @Override
