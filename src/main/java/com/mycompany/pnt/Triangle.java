@@ -29,6 +29,9 @@ public Triangle(Point p1,Point p2, Point p3 ){
     v[0] = new Vertex(new Point(p1.x-5, p1.y-5));
     v[1] = new Vertex(new Point(p2.x-5, p2.y-5));
     v[2] = new Vertex(new Point(p3.x-5, p3.y-5));
+    v[0].setDraggingPoint(new Point(p1.x-5, p1.y-5));
+    v[1].setDraggingPoint(new Point(p2.x-5, p2.y-5));
+    v[2].setDraggingPoint(new Point(p3.x-5, p3.y-5));
     
 }
 
@@ -59,10 +62,12 @@ public Triangle(Point p1,Point p2, Point p3 ){
     }
 @Override
     public Object copy() throws CloneNotSupportedException {
-        Triangle l = (Triangle) super.clone(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        Triangle l = (Triangle) super.clone();
+        l.v = new Vertex[3];
         for(int i = 0;i<3;i++){
-            l.v[0] = (Vertex) v[0].copy();
+            l.v[i] = (Vertex)  v[i].copy();
         }
+        System.out.println(l.getV().equals(v));
         /*l.getV()[0].setPosition(new Point(v[0].getPosition().x,v[0].getPosition().y));
         l.getV()[1].setPosition(new Point(v[1].getPosition().x,v[1].getPosition().y));
         l.getV()[2].setPosition(new Point(v[2].getPosition().x,v[2].getPosition().y));
@@ -71,7 +76,7 @@ public Triangle(Point p1,Point p2, Point p3 ){
         l.getV()[2].setDraggingPoint(new Point(v[2].getDraggingPoint().x,v[2].getDraggingPoint().y));*/
         return l;
     }
-
+    
     @Override
     public void moveTo(Point point) {
     int cx = (-getDraggingPoint().x+point.x);

@@ -12,19 +12,11 @@ public class Vertex extends ImShape implements Moveable , Shape{
         setPosition(new Point(point.x-5,point.y-5));
         setColor(java.awt.Color.BLACK);
         setFillColor(java.awt.Color.BLACK);
-        /*setColor(java.awt.Color.BLACK);
-        setFillColor(java.awt.Color.BLACK);*/
-        
     }
 
     @Override
     public Object copy() throws CloneNotSupportedException {
-        Vertex l = (Vertex) super.clone();
-        Point d = new Point(getDraggingPoint().x,getDraggingPoint().y);
-        Point p = new Point(getPosition().x,getPosition().y);
-        l.setPosition(p);
-        l.setDraggingPoint(d);
-        return l;
+        return super.clone();
     }
     @Override
     public void draw(Graphics canvas) {
