@@ -32,7 +32,7 @@ public class Quad extends ImShape implements Moveable , Shape{
     }
     @Override
     public void draw(Graphics canvas){
-        for(Vertex vs:v) vs.draw(canvas); 
+        if(isIsVisible()==true) for(Vertex vs:v) vs.draw(canvas); 
         int x = getPosition().x;
         int y = getPosition().y;
         canvas.setColor(getColor());

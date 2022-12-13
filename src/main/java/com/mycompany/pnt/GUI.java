@@ -347,7 +347,7 @@ paintPannel1.refresh(null);
       Moveable l;
       boolean flag = false;
         for (int i = 0 ;i<s.length;i++) {
-            paintPannel1.getShapes()[i].hide(paintPannel1.getShapes()[i].getV());
+            paintPannel1.getShapes()[i].setIsVisible(false);
             l = (Moveable) s[i];
             if (l.contains(clicked)) {
                 ss = s[i];
@@ -356,7 +356,7 @@ paintPannel1.refresh(null);
             }
         }
         if(flag){
-        paintPannel1.getShapes()[ii].show(paintPannel1.getShapes()[ii].getV());
+        paintPannel1.getShapes()[ii].setIsVisible(true);
         paintPannel1.removeShape(s[ii]);
         paintPannel1.addShape(ss);
         String cb= jComboBox1.getItemAt(ii);

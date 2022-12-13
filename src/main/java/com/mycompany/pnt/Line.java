@@ -37,7 +37,7 @@
         }
         @Override
         public void draw(Graphics canvas){
-            for(Vertex vs:v) vs.draw(canvas);
+            if(isIsVisible()==true) for(Vertex vs:v) vs.draw(canvas);
             canvas.setColor(getColor());
             canvas.drawLine(getPosition().x, getPosition().y, pt2.x, pt2.y);
         }

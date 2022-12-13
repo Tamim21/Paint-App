@@ -10,8 +10,8 @@ public class Vertex extends ImShape implements Moveable , Shape{
     
     public Vertex(Point point){
         setPosition(new Point(point.x-5,point.y-5));
-        setColor(java.awt.Color.WHITE);
-        setFillColor(java.awt.Color.WHITE);
+        setColor(java.awt.Color.BLACK);
+        setFillColor(java.awt.Color.BLACK);
         /*setColor(java.awt.Color.BLACK);
         setFillColor(java.awt.Color.BLACK);*/
         

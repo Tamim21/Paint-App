@@ -45,25 +45,6 @@ public void setDraggingPoint(java.awt.Point position){
  public void setIsVisible(boolean isVisible) {
         this.isVisible = isVisible;
     }
- @Override
- public void hide(Vertex[] v) {
-     for(Vertex vs:v){
-        vs.setColor(java.awt.Color.WHITE);
-        vs.setFillColor(java.awt.Color.WHITE);
-    }
-    setIsVisible(false);
-    System.out.println("HIDE" +!isIsVisible());
- }
-    @Override
-    public void show(Vertex[] v) {
-        for(Vertex vs:v){
-        vs.setColor(java.awt.Color.BLACK);
-        vs.setFillColor(java.awt.Color.BLACK);
-    }
-        setIsVisible(true);
-        System.out.println("SHOW" + isIsVisible());
-        
-    }
     @Override
     public boolean isIsVisible(){
         return isVisible;

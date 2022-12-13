@@ -12,8 +12,6 @@ public void draw(java.awt.Graphics canvas);
 public Object copy() throws CloneNotSupportedException;
 public void resize(java.awt.Point p);
 public Vertex[] getV();
-public void hide(Vertex[] v);
-public void show(Vertex[] v);
 public void setIsVisible(boolean isVisible);
 public boolean isIsVisible();
 

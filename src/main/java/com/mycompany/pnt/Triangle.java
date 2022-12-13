@@ -34,7 +34,7 @@ public Triangle(Point p1,Point p2, Point p3 ){
 
     @Override
     public void draw(Graphics canvas) {
-    for(Vertex vs:v) vs.draw(canvas);
+    if(isIsVisible()==true) for(Vertex vs:v) vs.draw(canvas);
     canvas.setColor(getColor());
     canvas.drawPolygon(new int[] {getPosition().x, p2.x, p3.x}, new int[] {getPosition().y,p2.y, p3.y}, 3);
     canvas.setColor(getFillColor());
